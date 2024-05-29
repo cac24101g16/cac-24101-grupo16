@@ -20,32 +20,42 @@
 </head>
 
 <body>
-    <div id="inicio"></div>
 
+
+
+    <div id="flogin"></div>
+    </div>
     <header>
         <div class="contenedor-h">
             <div class="logo">
 
                 <h1><i class="bi bi-film"></i> CAC-Movies</h1>
             </div>
+            <div>
+
+                <p id="usuario-logueado" style="position: fixed;right: 0;top: 4em;border-radius: 0 0 0 15px ; background-color: brown; padding: 5px 25px;"></p>
+            </div>
             <div class="acciones">
                 <ul>
                     <li><a href="#tendencias">Tendencias</a></li>
                     <li><a href="./registro.html">Registrarse</a></li>
-                    <li><a href="./login.html">Iniciar Sesión</a></li>
+                    <li><a id="boton-login" style="cursor: pointer;">Iniciar Sesión</a></li>
+                    <!-- <li><a href="./login.html">Iniciar Sesión</a></li> -->
                 </ul>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="presentacion">
-            <h2>Películas y series ilimitadas<br>en un solo lugar</h2>
-            <p>Disfrutas donde quieras.<br> Cancelas en cualquier momento.</p>
-            <a href="./registro.html">Registrate
-            </a>
-        </section>
 
+    <main>
+        <div id="no-logueado">
+            <section id="presentacion">
+                <h2>Películas y series ilimitadas<br>en un solo lugar</h2>
+                <p>Disfrutas donde quieras.<br> Cancelas en cualquier momento.</p>
+                <a href="./registro.html">Registrate
+                </a>
+                </section>
+        </div>
         <section id="buscar">
             <h3>¿Qué estas buscando para ver?</h3>
             <form action="" method="post" class="busqueda">
@@ -59,52 +69,17 @@
         <section id="tendencias">
             <h3>Las tendencias de hoy</h3>
             <div class="contenedor">
-                <div class="cartas">
-                    <div class="carta">
+                <div class="cartas" id="cartas-tendencias">
+                    | <div class="carta">
                         <img src="./media/peli1.jpg" alt="">
                         <p>Halloween</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli2.jpg" alt="">
-                        <p>Joker</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli3.jpg" alt="">
-                        <p>Rocky III</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli4.jpg" alt="">
-                        <p>Guardianes de la galaxia - Vol. 2</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli5.jpg" alt="">
-                        <p>Indiana Jones y la ultima cruzada</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli6.jpg" alt="">
-                        <p>Volver al futuro</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli7.jpg" alt="">
-                        <p>La vida es bella</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli8.jpg" alt="">
-                        <p>Forrest Gump</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli9.jpg" alt="">
-                        <p>The hangover</p>
-                    </div>
-                    <div class="carta">
-                        <img src="./media/peli10.jpg" alt="">
-                        <p>Tiburón</p>
                     </div>
                 </div>
             </div>
             <form class="navega">
-                <button type="button">Anterior</button>
-                <button type="button">Siguiente</button>
+                <button type="button" id="anterior">Anterior</button>
+                <span id="n-pagina"></span>
+                <button type="button" id="siguiente">Siguiente</button>
             </form>
         </section>
 
@@ -114,46 +89,10 @@
             <h3>Las más aclamadas</h3>
 
             <div class="contenedor">
-                <div class="peliculas-aclamadas">
+                <div class="peliculas-aclamadas" id="peli-aclamadas">
                     <div class="peli-aclamada">
                         <img src="./media/peli1.jpg" alt="">
                         <!-- <p>Halloween</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli2.jpg" alt="">
-                        <!-- <p>Joker</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli3.jpg" alt="">
-                        <!-- <p>Rocky III</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli4.jpg" alt="">
-                        <!-- <p>Guardianes de la galaxia - Vol. 2</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli5.jpg" alt="">
-                        <!-- <p>Indiana Jones y la ultima cruzada</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli6.jpg" alt="">
-                        <!-- <p>Volver al futuro</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli7.jpg" alt="">
-                        <!-- <p>La vida es bella</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli8.jpg" alt="">
-                        <!-- <p>Forrest Gump</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli9.jpg" alt="">
-                        <!-- <p>The hangover</p> -->
-                    </div>
-                    <div class="peli-aclamada">
-                        <img src="./media/peli10.jpg" alt="">
-                        <!-- <p>Tiburón</p> -->
                     </div>
                 </div>
             </div>
@@ -174,7 +113,7 @@
     </footer>
 
     <div class="subir">
-        <a href="#inicio"><i class="bi bi-arrow-up-circle-fill"></i></a>
+        <a onclick="window.scroll(0,0)" style="cursor: pointer;"><i class="bi bi-arrow-up-circle-fill"></i></a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -182,6 +121,10 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/index.js"></script>
+    <script src="./js/formLogin.js"></script>
+    <script src="./js/apis.js"></script>
+    <script src="./js/const.js"></script>
+    <!--    <script src="./js/const.js"></script> -->
 </body>
 
 </html>
